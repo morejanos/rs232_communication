@@ -204,6 +204,8 @@ void MainWindow::setControlsEnabled(bool enable)
 
 void MainWindow::rb_messageTypeChanged(bool checked)
 {
+    if (true == checked)
+    {
         if (ui->rb_PID->isChecked())
         {
             actualMessageType = MESSAGE_TYPE::PID;
@@ -225,6 +227,7 @@ void MainWindow::rb_messageTypeChanged(bool checked)
             actualMessageType = MESSAGE_TYPE::NONE;
             qDebug()<<"NONE!!!..";
         }
+    }
 }
 
 void MainWindow::psuTypeChanged(int index)
